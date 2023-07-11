@@ -2,6 +2,7 @@ import React from "react";
 import { Table } from "antd";
 import { ColumnsType, TableProps } from "antd/es/table";
 import data from "../mockData/MockResults.json";
+import ExportButtons from "./ExportButtons";
 
 /** Mora biti isto kao i json atributi */
 interface DataType {
@@ -123,6 +124,7 @@ const onChange: TableProps<DataType>["onChange"] = (
 export default function ResultTable() {
   return (
     <div>
+      <ExportButtons />
       <Table columns={columns} dataSource={data} onChange={onChange} />
     </div>
   );
